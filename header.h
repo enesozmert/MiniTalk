@@ -23,5 +23,10 @@ void sig_handler(int sig_num);
 void send_byte(int *byte, int pid);
 void print_byte(int *numbers);
 int byte_ascii(int *numbers);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void idx_end(int *numbers, int *i);
 
 #endif

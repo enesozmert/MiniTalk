@@ -25,7 +25,10 @@ int main(int argc, char **argv)
 	if (argc != 3)
 		return (0);
 	spid = atoi(argv[1]);
-	printf("Sending to : %i\n", spid);
+	client.p_id = spid;
+	ft_putstr_fd("Sending to :", 1);
+	ft_putnbr_fd(spid, 1);
+	ft_putchar_fd('\n', 1);
 	i = 0;
 	while (argv[2][i])
 	{

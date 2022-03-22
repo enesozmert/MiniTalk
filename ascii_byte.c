@@ -25,11 +25,19 @@ int	ft_iterative_power(int nb, int power)
 
 int* convert(char* c)
 {
-	int len=strlen(c),i;
-	int *a=(int*)malloc(len*sizeof(int));
-	for(i=0;i<len;i++)
-		a[i]=c[i]-48;
-	return a;
+	int len;
+	int *a;
+	int i;
+
+	i = 0;
+	len = strlen(c);
+	a = (int*)malloc(len * sizeof(int));
+	while (i < len)
+	{
+		a[i] = c[i] - 48;
+		i++;
+	}
+	return (a);
 }
 
 int *ascii_byte(int c)
