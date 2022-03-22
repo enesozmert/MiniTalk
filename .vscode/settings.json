@@ -1,0 +1,16 @@
+{
+	"files.associations": {
+		"header.h": "c",
+		"stdlib.h": "c",
+		"iterator": "c",
+		"__tuple": "c",
+		"array": "c",
+		"signal.h": "c",
+		"cstddef": "c",
+		"__bit_reference": "c",
+		"algorithm": "c",
+		"bitset": "c",
+		"chrono": "c",
+		"unordered_map": "c"
+	}
+}
