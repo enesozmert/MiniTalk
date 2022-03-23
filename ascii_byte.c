@@ -1,28 +1,5 @@
 #include "header.h"
 
-int	ft_iterative_power(int nb, int power)
-{
-	int	i;
-	int	result;
-
-	i = 0;
-	result = 1;
-	if (power == 0)
-	{
-		return (1);
-	}
-	else if (power < 0)
-	{
-		return (0);
-	}
-	while (i < power)
-	{
-		result = result * nb;
-		i++;
-	}
-	return (result);
-}
-
 int* convert(char* c)
 {
 	int len;
@@ -30,7 +7,7 @@ int* convert(char* c)
 	int i;
 
 	i = 0;
-	len = strlen(c);
+	len = (int)ft_strlen(c);
 	a = (int*)malloc(len * sizeof(int));
 	while (i < len)
 	{
