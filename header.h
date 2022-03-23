@@ -15,15 +15,15 @@ typedef struct c_client
 } t_client;
 
 
+int		*string_intarray(char* c);
 int		*ascii_byte(int c);
-int		*convert(char* c);
 int		byte_ascii(int *numbers);
 
-void	sig_handler(int sig_num);
+void 	sig_handler(int signum, siginfo_t *siginfo, void *unused);
+void	sig_fback(int signum, siginfo_t *siginfo, void *unused);
 void	send_byte(int *byte, int pid);
 void	print_byte(int *numbers);
-void	idx_end(int *numbers, int *i);
-void	sig_fback(int signum, siginfo_t *siginfo, void *unused);
+void	idx_end(int *numbers, int *i, siginfo_t *siginfo);
 
 int		ft_iterative_power(int nb, int power);
 int		ft_atoi(const char *str);

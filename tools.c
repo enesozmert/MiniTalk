@@ -1,4 +1,22 @@
 #include "header.h"
+int	ft_iterative_power(int nb, int power)
+{
+	int	i;
+	int	result;
+
+	i = 0;
+	result = 1;
+	if (power == 0)
+		return (1);
+	else if (power < 0)
+		return (0);
+	while (i < power)
+	{
+		result = result * nb;
+		i++;
+	}
+	return (result);
+}
 
 size_t	ft_strlen(char *str)
 {
@@ -32,23 +50,4 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (result * sign);
-}
-
-int	ft_iterative_power(int nb, int power)
-{
-	int	i;
-	int	result;
-
-	i = 0;
-	result = 1;
-	if (power == 0)
-		return (1);
-	else if (power < 0)
-		return (0);
-	while (i < power)
-	{
-		result = result * nb;
-		i++;
-	}
-	return (result);
 }

@@ -11,6 +11,7 @@
 		"algorithm": "c",
 		"bitset": "c",
 		"chrono": "c",
-		"unordered_map": "c"
+		"unordered_map": "c",
+		"stdio.h": "c"
 	}
 }

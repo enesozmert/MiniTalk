@@ -1,6 +1,6 @@
 #include "header.h"
 
-int* convert(char* c)
+int* string_intarray(char* c)
 {
 	int len;
 	int *a;
@@ -38,7 +38,7 @@ int *ascii_byte(int c)
 	str[8] = '\0';
 	if(str == NULL)
 		return(0);
-	return convert(str);
+	return string_intarray(str);
 }
 
 int byte_ascii(int *numbers)
