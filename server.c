@@ -42,8 +42,13 @@ int main()
 	p_id = getpid();
 	bzero(&act, sizeof(act));
 	act.sa_handler = &sig_handler;
+	act.sa_flags = SA_SIGINFO;
 	sigaction(SIGUSR1, &act, NULL);
 	sigaction(SIGUSR2, &act, NULL);
+	if ((sigaction(SIGUSR1, &act, 0)) == -1)
+		ft_putstr_fd("Error sigaction \n", -1);
+	if ((sigaction(SIGUSR2, &act, 0)) == -1)
+		ft_putstr_fd("Error sigaction \n", -1);
 	ft_putnbr_fd(p_id,1);
 	ft_putchar_fd('\n', 1);
 	while (1)

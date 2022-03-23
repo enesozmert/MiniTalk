@@ -1,7 +1,7 @@
 CC = clang
 CFLAGS = -Wall -Werror -Wextra
-CLIENT = $(CC) $(CFLAGS) client.c ascii_byte.c print.c -o client
-SERVER = $(CC) $(CFLAGS) server.c ascii_byte.c print.c -o server
+CLIENT = $(CC) $(CFLAGS) client.c ascii_byte.c ft_put.c -o client
+SERVER = $(CC) $(CFLAGS) server.c ascii_byte.c ft_put.c -o server
 NAME_CL = client
 NAME_SV = server
 all: $(NAME_CL) $(NAME_SV)
