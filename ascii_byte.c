@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ascii_byte.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: eozmert <eozmert@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/24 12:12:29 by eozmert           #+#    #+#             */
+/*   Updated: 2022/03/24 16:09:32 by eozmert          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "header.h"
 
-int* string_intarray(char* c)
+int*	string_intarray(char* c)
 {
 	int len;
 	int *a;
@@ -17,11 +29,11 @@ int* string_intarray(char* c)
 	return (a);
 }
 
-int *ascii_byte(int c)
+int	*ascii_byte(int c)
 {
-	int i;
-	int value;
-	char *str;
+	int		i;
+	int 	value;
+	char 	*str;
 
 	i = 0;
 	value = 0;
@@ -37,11 +49,11 @@ int *ascii_byte(int c)
 	}
 	str[8] = '\0';
 	if(str == NULL)
-		return(0);
+		return (0);
 	return string_intarray(str);
 }
 
-int byte_ascii(int *numbers)
+int	byte_ascii(int *numbers)
 {
 	int i;
 	int result;

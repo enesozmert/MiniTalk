@@ -12,6 +12,9 @@
 		"bitset": "c",
 		"chrono": "c",
 		"unordered_map": "c",
-		"stdio.h": "c"
+		"stdio.h": "c",
+		"unistd.h": "c",
+		"string.h": "c",
+		"_types.h": "c"
 	}
 }
