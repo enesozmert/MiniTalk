@@ -6,11 +6,12 @@
 /*   By: eozmert <eozmert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 12:12:48 by eozmert           #+#    #+#             */
-/*   Updated: 2022/03/24 12:12:51 by eozmert          ###   ########.fr       */
+/*   Updated: 2022/03/29 14:30:33 by eozmert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
+
 int	ft_iterative_power(int nb, int power)
 {
 	int	i;
@@ -32,7 +33,7 @@ int	ft_iterative_power(int nb, int power)
 
 size_t	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -62,4 +63,24 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (result * sign);
+}
+
+void	*ft_memset(void *b, int c, size_t len)
+{
+	size_t	i;
+
+	i = 0;
+	if (!b)
+		return (NULL);
+	while (i < len)
+	{
+		*(unsigned char *)(b + i) = (unsigned char)c;
+		i++;
+	}
+	return (b);
+}
+
+void	ft_bzero(void *s, size_t n)
+{
+	ft_memset(s, '\0', n);
 }

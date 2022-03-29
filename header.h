@@ -6,12 +6,12 @@
 /*   By: eozmert <eozmert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 12:12:43 by eozmert           #+#    #+#             */
-/*   Updated: 2022/03/24 12:12:45 by eozmert          ###   ########.fr       */
+/*   Updated: 2022/03/29 14:33:42 by eozmert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HEADER_H
-#define HEADER_H
+# define HEADER_H
 
 # include <signal.h>
 # include <stdio.h>
@@ -22,25 +22,26 @@
 
 typedef struct c_client
 {
-	int p_id;
-	int *numbers;
-} t_client;
+	int		p_id;
+	int		*numbers;
+}	t_client;
 
-
-int		*string_intarray(char* c);
+//connecting
+int		*string_intarray(char *c);
 int		*ascii_byte(int c);
 int		byte_ascii(int *numbers);
-
-void 	sig_handler(int signum, siginfo_t *siginfo, void *unused);
+void	sig_handler(int signum, siginfo_t *siginfo, void *unused);
 void	sig_fback(int signum, siginfo_t *siginfo, void *unused);
 void	send_byte(int *byte, int pid);
 void	print_byte(int *numbers);
 void	idx_end(int *numbers, int *i, siginfo_t *siginfo);
-
+//tools
 int		ft_iterative_power(int nb, int power);
 int		ft_atoi(const char *str);
 size_t	ft_strlen(char *str);
-
+void	*ft_memset(void *b, int c, size_t len);
+void	ft_bzero(void *s, size_t n);
+//put
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);

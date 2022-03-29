@@ -6,34 +6,35 @@
 /*   By: eozmert <eozmert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 12:12:29 by eozmert           #+#    #+#             */
-/*   Updated: 2022/03/24 16:09:32 by eozmert          ###   ########.fr       */
+/*   Updated: 2022/03/29 14:22:02 by eozmert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int*	string_intarray(char* c)
+int	*string_intarray(char *c)
 {
-	int len;
-	int *a;
-	int i;
+	int	len;
+	int	*a;
+	int	i;
 
 	i = 0;
 	len = (int)ft_strlen(c);
-	a = (int*)malloc(len * sizeof(int));
+	a = (int *)malloc(len * sizeof(int));
 	while (i < len)
 	{
 		a[i] = c[i] - 48;
 		i++;
 	}
+	free(c);
 	return (a);
 }
 
 int	*ascii_byte(int c)
 {
 	int		i;
-	int 	value;
-	char 	*str;
+	int		value;
+	char	*str;
 
 	i = 0;
 	value = 0;
@@ -48,15 +49,15 @@ int	*ascii_byte(int c)
 		i++;
 	}
 	str[8] = '\0';
-	if(str == NULL)
+	if (str == NULL)
 		return (0);
-	return string_intarray(str);
+	return (string_intarray(str));
 }
 
 int	byte_ascii(int *numbers)
 {
-	int i;
-	int result;
+	int	i;
+	int	result;
 
 	i = 0;
 	result = 0;
